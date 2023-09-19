@@ -10,7 +10,7 @@ IFS="
 MAXDISK=3000000
 WARNDISK=2000000
 
-if -n "$2"; then
+if test -n "$2"; then
 	WARNDISK=$1
 	MAXDISK=$2
 fi
