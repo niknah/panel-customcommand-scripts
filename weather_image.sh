@@ -24,9 +24,8 @@ SHOWERS=`echo "$FORECAST" | jq -r .daily.showers_sum[$DAY_NTH]`
 RAIN=${RAIN/\./}
 SHOWERS=${SHOWERS/\./}
 
-
 if test $RAIN -gt 0; then
-	cat "$SVGDIR/sun.svg";
+	cat "$SVGDIR/rain.svg";
 elif test $SHOWERS -gt 0; then
 	cat "$SVGDIR/showers.svg";
 else
